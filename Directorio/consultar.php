@@ -74,7 +74,7 @@
                             try{
                                 if (isset($_POST['busqueda'])) {
                                     $criterio = $_POST['busqueda'];                                                             
-                                    $sql = "SELECT * FROM clientes WHERE Cedula LIKE '%$criterio%'";
+                                    $sql = "SELECT * FROM clientes WHERE Cedula = $criterio";
                                     foreach ($db->query($sql) as $row) {
                                         ?>
                                     <tr>
